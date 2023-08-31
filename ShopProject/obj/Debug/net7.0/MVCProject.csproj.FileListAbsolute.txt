@@ -1,0 +1,88 @@
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/appsettings.Development.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/appsettings.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/MVCProject.staticwebassets.runtime.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/MVCProject
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/MVCProject.deps.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/MVCProject.runtimeconfig.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/MVCProject.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/MVCProject.pdb
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/MVCProject.csproj.AssemblyReference.cache
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/MVCProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/MVCProject.AssemblyInfoInputs.cache
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/MVCProject.AssemblyInfo.cs
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/MVCProject.csproj.CoreCompileInputs.cache
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/MVCProject.MvcApplicationPartsAssemblyInfo.cache
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/MVCProject.RazorAssemblyInfo.cache
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/MVCProject.RazorAssemblyInfo.cs
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/staticwebassets/msbuild.MVCProject.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/staticwebassets/msbuild.build.MVCProject.props
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.MVCProject.props
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.MVCProject.props
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/staticwebassets.pack.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/staticwebassets.build.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/staticwebassets.development.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/scopedcss/bundle/MVCProject.styles.css
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/scopedcss/projectbundle/MVCProject.bundle.scp.css
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/MVCProject.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/refint/MVCProject.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/MVCProject.pdb
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/MVCProject.genruntimeconfig.cache
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/ref/MVCProject.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/Humanizer.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/dotnet-ef.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/Mono.TextTemplating.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/MySqlConnector.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/Pomelo.EntityFrameworkCore.MySql.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/bin/Debug/net7.0/System.CodeDom.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/MVCProject/obj/Debug/net7.0/MVCProject.csproj.CopyComplete
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/appsettings.Development.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/appsettings.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/MVCProject.staticwebassets.runtime.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/MVCProject
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/MVCProject.deps.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/MVCProject.runtimeconfig.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/MVCProject.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/MVCProject.pdb
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/Humanizer.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/dotnet-ef.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/Mono.TextTemplating.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/MySqlConnector.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/Pomelo.EntityFrameworkCore.MySql.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/bin/Debug/net7.0/System.CodeDom.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/MVCProject.csproj.AssemblyReference.cache
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/MVCProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/MVCProject.AssemblyInfoInputs.cache
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/MVCProject.AssemblyInfo.cs
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/MVCProject.csproj.CoreCompileInputs.cache
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/MVCProject.MvcApplicationPartsAssemblyInfo.cache
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/MVCProject.RazorAssemblyInfo.cache
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/MVCProject.RazorAssemblyInfo.cs
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/staticwebassets/msbuild.MVCProject.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/staticwebassets/msbuild.build.MVCProject.props
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.MVCProject.props
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.MVCProject.props
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/staticwebassets.pack.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/staticwebassets.build.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/staticwebassets.development.json
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/scopedcss/bundle/MVCProject.styles.css
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/scopedcss/projectbundle/MVCProject.bundle.scp.css
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/MVCProject.csproj.CopyComplete
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/MVCProject.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/refint/MVCProject.dll
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/MVCProject.pdb
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/MVCProject.genruntimeconfig.cache
+/Users/user/Documents/Microsoft .Net Certification/CsharpProjects/N-tier Arhitecture Project/ShopProject/obj/Debug/net7.0/ref/MVCProject.dll
