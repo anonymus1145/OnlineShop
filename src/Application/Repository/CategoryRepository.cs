@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using Shop_DataAccess.Data;
-using Shop_Models.Models;
+using Shop.Application.Data;
+using Shop.Domain.Models;
 
-namespace Shop_DataAccess.Repository
+namespace Shop.Application.Repository
 {
     public class CategoryRepository : Repository<Category>, ICategoryRepository
     {

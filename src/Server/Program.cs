@@ -4,9 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Pomelo.EntityFrameworkCore.MySql;
-using Shop_DataAccess.Data;
-using Shop_DataAccess.Repository;
-using Shop_DataAccess.Repository.IRepository;
+using Shop.Application.Data;
+using Shop.Application.Repository;
+using Shop.Application.Repository.IRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 

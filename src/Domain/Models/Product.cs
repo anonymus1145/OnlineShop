@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace Shop_Models.Models
+namespace Shop.Domain.Models
 {
     public class Product
     {

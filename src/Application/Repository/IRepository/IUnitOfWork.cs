@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Shop_DataAccess.Repository.IRepository;
+using Shop.Application.Repository.IRepository;
 
-namespace Shop_DataAccess.Repository.IRepository
+namespace Shop.Application.Repository.IRepository
 {
     public interface IUnitOfWork
     {

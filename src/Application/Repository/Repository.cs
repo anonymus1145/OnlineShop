@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using Shop_DataAccess.Data;
-using Shop_DataAccess.Repository.IRepository;
+using Shop.Application.Data;
+using Shop.Application.Repository.IRepository;
 
-namespace Shop_DataAccess.Repository
+namespace Shop.Application.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {

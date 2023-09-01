@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using Shop_Models.Models;
+using Shop.Domain.Models;
 
-namespace Shop_DataAccess.Repository.IRepository
+namespace Shop.Application.Repository.IRepository
 {
      public interface IProductRepository : IRepository<Product>
     {

@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using Shop_DataAccess.Data;
-using Shop_DataAccess.Repository;
-using Shop_DataAccess.Repository.IRepository;
-using Shop_Models.Models;
+using Shop.Application.Data;
+using Shop.Application.Repository;
+using Shop.Application.Repository.IRepository;
+using Shop.Domain.Models;
 
-namespace ShopProject.Areas.Admin.Controllers
+namespace Shop.Server.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class CategoryController : Controller

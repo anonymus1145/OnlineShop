@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Shop_DataAccess.Data;
+using Shop.Application.Data;
 
 #nullable disable
 
-namespace ShopProject.Migrations
+namespace Shop.Server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20230825191342_SecondMigration")]
@@ -21,7 +21,7 @@ namespace ShopProject.Migrations
                 .HasAnnotation("ProductVersion", "7.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("Shop_Models.Models.Category", b =>
+            modelBuilder.Entity("Shop.Domain.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -66,7 +66,7 @@ namespace ShopProject.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Shop_Models.Models.Product", b =>
+            modelBuilder.Entity("Shop.Domain.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -161,9 +161,9 @@ namespace ShopProject.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Shop_Models.Models.Product", b =>
+            modelBuilder.Entity("Shop.Domain.Models.Product", b =>
                 {
-                    b.HasOne("Shop_Models.Models.Category", "MyProprety")
+                    b.HasOne("Shop.Domain.Models.Category", "MyProprety")
                         .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)

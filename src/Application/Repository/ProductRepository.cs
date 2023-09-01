@@ -4,11 +4,11 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Shop_DataAccess.Data;
-using Shop_DataAccess.Repository.IRepository;
-using Shop_Models.Models;
+using Shop.Application.Data;
+using Shop.Application.Repository.IRepository;
+using Shop.Domain.Models;
 
-namespace Shop_DataAccess.Repository
+namespace Shop.Application.Repository
 {
     public class ProductRepository : Repository<Product>, IProductRepository
     {

@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Shop_DataAccess.Repository.IRepository;
-using Shop_Models.Models;
+using Shop.Application.Repository.IRepository;
+using Shop.Domain.Models;
 
-namespace Shop_DataAccess.Repository
+namespace Shop.Application.Repository
 {
     public interface ICategoryRepository  : IRepository<Category>
     {

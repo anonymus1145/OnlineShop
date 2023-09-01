@@ -9,13 +9,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Hosting;
-using Shop_DataAccess.Data;
-using Shop_DataAccess.Repository;
-using Shop_DataAccess.Repository.IRepository;
-using Shop_Models.Models;
-using Shop_Models.ViewModels;
+using Shop.Application.Data;
+using Shop.Application.Repository;
+using Shop.Application.Repository.IRepository;
+using Shop.Domain.Models;
+using Shop.Domain;
 
-namespace ShopProject.Areas.Admin.Controllers
+namespace Shop.Server.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class ProductController : Controller

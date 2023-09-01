@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Shop_Models.Models;
+using Shop.Domain.Models;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace Shop_Models.ViewModels
+namespace Shop.Domain
 {
     public class ProductVM
     {
