@@ -1,0 +1,54 @@
+﻿@model List<Product>
+
+<div class="container">
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+            <h2 class="text-primary">
+                Product List
+            </h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Product" asp-action="Upsert" class="btn btn-primary">
+                <i class="bi bi-plus-square-dotted"></i> Create New Product
+            </a>
+        </div>
+    </div>
+
+    <table id="tblData" class="table table-bordered table-striped" style="width: 100%">
+        <thead>
+            <tr>
+                <th>
+                    Nume Produs
+                </th>
+                <th>
+                    Model Compatibil
+                </th>
+                <th>
+                    Producător
+                </th>
+                <th>
+                    Cod Produs
+                </th>
+                <th>
+                    Culoare
+                </th>
+                <th>
+                    Preț Listă
+                </th>
+                <th>
+                    Preț 2-3 bucăți
+                </th>
+                <th>
+                    Preț peste 3 bucăți
+                </th>
+                <th>Category</th>
+                <th>
+                    
+                </th>
+            </tr>
+        </thead>
+</div>
+
+@section Scripts{
+    <script src="~/js/product.js"></script>
+}
