@@ -8,4 +8,6 @@ WebApplication app = builder.Build();
 
 app.ConfigureAppRequestPipeline();
 
+await app.SetupAppDatabaseAsync();
+
 app.Run();

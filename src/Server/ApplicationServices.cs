@@ -1,8 +1,12 @@
+using System;
+using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 using Shop.Application.Data;
 using Shop.Application.Repository;
@@ -45,5 +49,24 @@ internal static class ApplicationServices
         app.MapControllerRoute(
             name: "default",
             pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
+    }
+
+    public static async Task SetupAppDatabaseAsync(this WebApplication app)
+    {
+        using AsyncServiceScope scope = app.Services.CreateAsyncScope();
+        ApplicationDbContext dbContext =
+            scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+        try
+        {
+            await dbContext.Database.MigrateAsync();
+        }
+        catch (Exception ex)
+        {
+            ILogger<Program> logger = app.Services.GetRequiredService<ILogger<Program>>();
+            string message = "An error occurred while migrating the database. Fix errors and try again.";
+            logger.LogError(ex, message);
+            throw;
+        }
     }
 }
