@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
 using Shop.Application.Data;
@@ -23,11 +24,14 @@ namespace Shop.Server.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IWebHostEnvironment _webHostEnvironment;
-        public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment webHostEnvironment)
+        private readonly IConfiguration _configuration;
+
+        public ProductController(
+            IUnitOfWork unitOfWork,
+            IConfiguration configuration)
         {
             _unitOfWork = unitOfWork;
-            _webHostEnvironment = webHostEnvironment;
+            _configuration = configuration;
         }
 
         public IActionResult Index()
@@ -60,52 +64,27 @@ namespace Shop.Server.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Upsert(ProductVM productVM, IFormFile file)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+                return View(productVM);
+
+            StoreProductAsset(productVM.Product, file);
+
+            if (productVM.Product.Id == 0)
             {
-                string wwwRootPath = _webHostEnvironment.WebRootPath;
-                if (file != null)
-                {
-                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                    string productPath = Path.Combine(wwwRootPath, @"images/product");
-                    string extension = Path.GetExtension(file.FileName);
-
-
-                    if (productVM.Product.ImageUrl != null)
-                    {
-                        //Delete the old image
-                        string oldImagePath = Path.Combine(wwwRootPath, productVM.Product.ImageUrl.TrimStart('\\'));
-
-                        if (System.IO.File.Exists(oldImagePath))
-                        {
-                            System.IO.File.Delete(oldImagePath);
-                        }
-                    }
-
-                    using (FileStream fileStream = new FileStream(Path.Combine(productPath, fileName + extension), FileMode.Create))
-                    {
-                        file.CopyTo(fileStream);
-                    }
-                    productVM.Product.ImageUrl = @"\images\product\" + fileName + extension;
-                }
-                if (productVM.Product.Id == 0)
-                {
-                    _unitOfWork.Product.Add(productVM.Product);
-                }
-                else
-                {
-                    _unitOfWork.Product.Update(productVM.Product);
-                }
-
-                _unitOfWork.Save();
-
-                //Method to display a message!
-                TempData["Success"] = "Product created successfully";
-
-                return RedirectToAction("Index", "Product");
+                _unitOfWork.Product.Add(productVM.Product);
             }
-            return View(productVM);
-        }
+            else
+            {
+                _unitOfWork.Product.Update(productVM.Product);
+            }
 
+            _unitOfWork.Save();
+
+            //Method to display a message!
+            TempData["Success"] = "Product created successfully";
+
+            return RedirectToAction("Index", "Product");
+        }
 
         #region API CALLS
 
@@ -120,16 +99,12 @@ namespace Shop.Server.Areas.Admin.Controllers
         public IActionResult Delete(int? id)
         {
             Product? productToBeDeleted = _unitOfWork.Product.Get(u => u.Id == id);
-            if (productToBeDeleted == null)
+            if (productToBeDeleted is null)
             {
                 return Json(new { success = false, message = "Error while deleting" });
             }
 
-            string oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, productToBeDeleted.ImageUrl.TrimStart('\\'));
-            if (System.IO.File.Exists(oldImagePath))
-            {
-                System.IO.File.Delete(oldImagePath);
-            }
+            DeleteProductFile(productToBeDeleted.ImageUrl);
 
             _unitOfWork.Product.Remove(productToBeDeleted);
             _unitOfWork.Save();
@@ -137,5 +112,52 @@ namespace Shop.Server.Areas.Admin.Controllers
 
         }
         #endregion
+
+        private void StoreProductAsset(Product product, IFormFile file)
+        {
+            string newFilePath = UploadProductFile(file);
+            DeleteProductFile(product.ImageUrl);
+            product.ImageUrl = newFilePath;
+        }
+
+        private string UploadProductFile(IFormFile file)
+        {
+            DirectoryInfo assetsBaseDirectory = GetAssetsDirectory();
+            string assetsDirectoryPath = $"{assetsBaseDirectory}";
+
+            string fileName = $"{Guid.NewGuid()}{Path.GetExtension(file.FileName)}";
+            string relativeFilePath = Path.Combine("products", fileName);
+
+            string filePath = Path.Combine(assetsDirectoryPath, relativeFilePath);
+            using FileStream fileStream = new(filePath, FileMode.Create);
+            file.CopyTo(fileStream);
+
+            return filePath;
+        }
+
+        private void DeleteProductFile(string relativeFilePath)
+        {
+            ArgumentException.ThrowIfNullOrEmpty(relativeFilePath);
+
+            DirectoryInfo assetsBaseDirectory = GetAssetsDirectory();
+            string assetsDirectoryPath = $"{assetsBaseDirectory}";
+            string oldFilePath = Path.Combine(assetsDirectoryPath, relativeFilePath);
+            if (System.IO.File.Exists(oldFilePath))
+            {
+                System.IO.File.Delete(oldFilePath);
+            }
+        }
+
+        private DirectoryInfo GetAssetsDirectory()
+        {
+            string? assetsDirectory =
+                _configuration.GetValue<string>(ApplicationSettings.AssetsBasePath);
+
+            string message = $"Invalid value for configuration '{nameof(ApplicationSettings.AssetsBasePath)}'.";
+            ArgumentException.ThrowIfNullOrEmpty(assetsDirectory, message);
+
+            assetsDirectory = Path.GetFullPath(assetsDirectory);
+            return Directory.CreateDirectory(assetsDirectory);
+        }
     }
 }
