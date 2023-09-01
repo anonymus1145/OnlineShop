@@ -5,21 +5,20 @@ using System.Linq.Expressions;
 
 using Microsoft.EntityFrameworkCore;
 
-using Shop.Application.Data;
 using Shop.Application.Repository.IRepository;
 
 namespace Shop.Application.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly ApplicationDbContext _db;
+        private readonly IApplicationDatabase _db;
         internal DbSet<T> dbSet;
-        public Repository(ApplicationDbContext db)
+        public Repository(IApplicationDatabase db)
         {
             _db = db;
-            this.dbSet = _db.Set<T>();
-            _db.Products.Include(u => u.CategoryId).Include(u => u.Category);
+            this.dbSet = _db.CreateSet<T>();
         }
+
         public void Add(T entity)
         {
             dbSet.Add(entity);

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 using Microsoft.EntityFrameworkCore;
 
-using Shop.Application.Data;
 using Shop.Application.Repository.IRepository;
 using Shop.Domain.Models;
 
@@ -14,8 +13,8 @@ namespace Shop.Application.Repository
 {
     public class ProductRepository : Repository<Product>, IProductRepository
     {
-        public ApplicationDbContext _db;
-        public ProductRepository(ApplicationDbContext db) : base(db)
+        public IApplicationDatabase _db;
+        public ProductRepository(IApplicationDatabase db) : base(db)
         {
             _db = db;
         }

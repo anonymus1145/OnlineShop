@@ -12,7 +12,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
-using Shop.Application.Data;
 using Shop.Application.Repository;
 using Shop.Application.Repository.IRepository;
 using Shop.Domain;

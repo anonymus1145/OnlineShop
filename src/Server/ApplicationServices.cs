@@ -8,9 +8,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-using Shop.Application.Data;
+using Shop.Application;
 using Shop.Application.Repository;
 using Shop.Application.Repository.IRepository;
+using Shop.Infrastructure.Persistence;
 
 internal static class ApplicationServices
 {
@@ -23,11 +24,13 @@ internal static class ApplicationServices
             options.UseMySql(
                 connectionString: connectionString,
                 serverVersion: ServerVersion.AutoDetect(connectionString),
-                mySqlOptionsAction: action => action.MigrationsAssembly(typeof(Program).Assembly.FullName)
+                mySqlOptionsAction: action => action.MigrationsAssembly(
+                    typeof(ApplicationDbContext).Assembly.FullName)
             );
         });
 
         builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+        builder.Services.AddScoped<IApplicationDatabase, ApplicationDbContext>();
     }
 
     public static void ConfigureAppRequestPipeline(this WebApplication app)

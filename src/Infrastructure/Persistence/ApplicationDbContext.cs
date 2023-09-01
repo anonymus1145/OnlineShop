@@ -1,17 +1,22 @@
 using Microsoft.EntityFrameworkCore;
 
+using Shop.Application;
 using Shop.Domain.Models;
 
-namespace Shop.Application.Data
+namespace Shop.Infrastructure.Persistence
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext, IApplicationDatabase
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
+
         //Create a DbSet for Models -> Category
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories => Set<Category>();
+        public DbSet<Product> Products => Set<Product>();
+
+        public DbSet<TEntity>? CreateSet<TEntity>() where TEntity : class =>
+            Set<TEntity>();
 
         //We override the  default function
         //Using this builder we can use to see data

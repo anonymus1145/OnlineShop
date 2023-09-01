@@ -4,7 +4,6 @@ using System.Linq;
 
 using Microsoft.AspNetCore.Mvc;
 
-using Shop.Application.Data;
 using Shop.Application.Repository;
 using Shop.Application.Repository.IRepository;
 using Shop.Domain.Models;
