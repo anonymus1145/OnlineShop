@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/ShopProject/bin/Debug/net7.0/ShopProject.dll",
+            "program": "${workspaceFolder}/ShopProject/bin/Debug/net7.0/Shop.Server.dll",
             "args": [],
             "cwd": "${workspaceFolder}/ShopProject",
             "stopAtEntry": false,
