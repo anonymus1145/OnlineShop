@@ -19,7 +19,7 @@ internal static class ApplicationServices
             options.UseMySql(
                 connectionString: connectionString,
                 serverVersion: ServerVersion.AutoDetect(connectionString),
-                mySqlOptionsAction: action => action.MigrationsAssembly("ShopProject")
+                mySqlOptionsAction: action => action.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)
             );
         });
 
