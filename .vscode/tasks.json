@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/ShopProject/Shop.Server.csproj",
+                "${workspaceFolder}/OnlineShop.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/ShopProject/Shop.Server.csproj",
+                "${workspaceFolder}/OnlineShop.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/ShopProject/Shop.Server.csproj"
+                "${workspaceFolder}/OnlineShop.sln"
             ],
             "problemMatcher": "$msCompile"
         }
