@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+
 using Microsoft.EntityFrameworkCore;
+
 using Shop.Application.Data;
 using Shop.Application.Repository.IRepository;
 using Shop.Domain.Models;
@@ -19,7 +21,7 @@ namespace Shop.Application.Repository
         }
         public void Update(Product obj)
         {
-            var objFromDb = _db.Products.FirstOrDefault(u => u.Id == obj.Id);
+            Product? objFromDb = _db.Products.FirstOrDefault(u => u.Id == obj.Id);
             if (objFromDb != null)
             {
                 objFromDb.Nume = obj.Nume;

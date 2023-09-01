@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+
 using Shop.Domain.Models;
 
 namespace Shop.Application.Data
@@ -7,7 +8,6 @@ namespace Shop.Application.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            
         }
         //Create a DbSet for Models -> Category
         public DbSet<Category> Categories { get; set; }
@@ -18,10 +18,10 @@ namespace Shop.Application.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>().HasData(
-                new Category { Id = 1, Name = "Ecrane", DisplayOrder = 100},
-                new Category { Id = 2, Name = "Capace Spate", DisplayOrder = 100},
-                new Category { Id = 3, Name = "Acumulatori", DisplayOrder = 100},
-                new Category { Id = 4, Name = "Programare Reparatii", DisplayOrder = 10}
+                new Category { Id = 1, Name = "Ecrane", DisplayOrder = 100 },
+                new Category { Id = 2, Name = "Capace Spate", DisplayOrder = 100 },
+                new Category { Id = 3, Name = "Acumulatori", DisplayOrder = 100 },
+                new Category { Id = 4, Name = "Programare Reparatii", DisplayOrder = 10 }
             );
 
             modelBuilder.Entity<Product>().HasData(
@@ -38,23 +38,23 @@ namespace Shop.Application.Data
                     Price = 170,
                     Price3 = 160,
                     CategoryId = 2,
-                    ImageUrl =""
+                    ImageUrl = ""
                 },
                  new Product
-                {
-                    Id = 2,
-                    Nume = "Capac spate",
-                    ModelCompatibil = "N970",
-                    Producator = "SAMSUNG",
-                    Descriere = "Capac baterie original, Service Pack pentru Samsung Galaxy Note 10",
-                    CodProdus = "GH82-20528C",
-                    Culoare = "Aura Glow",
-                    ListPrice = 180,
-                    Price = 170,
-                    Price3 = 160,
-                    CategoryId = 2,
-                    ImageUrl =""
-                },
+                 {
+                     Id = 2,
+                     Nume = "Capac spate",
+                     ModelCompatibil = "N970",
+                     Producator = "SAMSUNG",
+                     Descriere = "Capac baterie original, Service Pack pentru Samsung Galaxy Note 10",
+                     CodProdus = "GH82-20528C",
+                     Culoare = "Aura Glow",
+                     ListPrice = 180,
+                     Price = 170,
+                     Price3 = 160,
+                     CategoryId = 2,
+                     ImageUrl = ""
+                 },
                 new Product
                 {
                     Id = 3,
@@ -68,7 +68,7 @@ namespace Shop.Application.Data
                     Price = 170,
                     Price3 = 160,
                     CategoryId = 2,
-                    ImageUrl =""
+                    ImageUrl = ""
                 }
             );
         }

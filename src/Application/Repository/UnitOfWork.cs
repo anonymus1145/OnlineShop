@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 using Shop.Application.Data;
 using Shop.Application.Repository.IRepository;
 
@@ -9,7 +10,7 @@ namespace Shop.Application.Repository
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private ApplicationDbContext _db;
+        private readonly ApplicationDbContext _db;
         public ICategoryRepository Category { get; private set; }
 
         public IProductRepository Product { get; private set; }

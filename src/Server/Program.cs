@@ -3,25 +3,30 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+
 using Pomelo.EntityFrameworkCore.MySql;
+
 using Shop.Application.Data;
 using Shop.Application.Repository;
 using Shop.Application.Repository.IRepository;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<ApplicationDbContext>(options=>
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    var connectionString = builder.Configuration.GetConnectionString("Default");
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString), x => x.MigrationsAssembly("ShopProject"));
+    string? connectionString = builder.Configuration.GetConnectionString("Default");
+    options.UseMySql(
+        connectionString: connectionString,
+        serverVersion: ServerVersion.AutoDetect(connectionString),
+        mySqlOptionsAction: action => action.MigrationsAssembly("ShopProject")
+    );
 });
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -42,4 +47,4 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
 
-app.Run(); 
+app.Run();

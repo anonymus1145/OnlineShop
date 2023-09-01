@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+
 using Shop.Application.Data;
 using Shop.Domain.Models;
 
@@ -21,4 +22,4 @@ namespace Shop.Application.Repository
             _db.Categories.Update(obj);
         }
     }
-}  
+}

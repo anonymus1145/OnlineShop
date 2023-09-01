@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Hosting;
+
 using Shop.Application.Data;
 using Shop.Application.Repository;
 using Shop.Application.Repository.IRepository;
-using Shop.Domain.Models;
 using Shop.Domain;
+using Shop.Domain.Models;
 
 namespace Shop.Server.Areas.Admin.Controllers
 {
@@ -65,13 +67,13 @@ namespace Shop.Server.Areas.Admin.Controllers
                 {
                     string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
                     string productPath = Path.Combine(wwwRootPath, @"images/product");
-                    var extension = Path.GetExtension(file.FileName);
+                    string extension = Path.GetExtension(file.FileName);
 
 
                     if (productVM.Product.ImageUrl != null)
                     {
                         //Delete the old image
-                        var oldImagePath = Path.Combine(wwwRootPath, productVM.Product.ImageUrl.TrimStart('\\'));
+                        string oldImagePath = Path.Combine(wwwRootPath, productVM.Product.ImageUrl.TrimStart('\\'));
 
                         if (System.IO.File.Exists(oldImagePath))
                         {
@@ -79,7 +81,7 @@ namespace Shop.Server.Areas.Admin.Controllers
                         }
                     }
 
-                    using (var fileStream = new FileStream(Path.Combine(productPath, fileName + extension), FileMode.Create))
+                    using (FileStream fileStream = new FileStream(Path.Combine(productPath, fileName + extension), FileMode.Create))
                     {
                         file.CopyTo(fileStream);
                     }
@@ -117,13 +119,13 @@ namespace Shop.Server.Areas.Admin.Controllers
         [HttpDelete]
         public IActionResult Delete(int? id)
         {
-            var productToBeDeleted = _unitOfWork.Product.Get(u => u.Id == id);
+            Product? productToBeDeleted = _unitOfWork.Product.Get(u => u.Id == id);
             if (productToBeDeleted == null)
             {
                 return Json(new { success = false, message = "Error while deleting" });
             }
 
-            var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, productToBeDeleted.ImageUrl.TrimStart('\\'));
+            string oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, productToBeDeleted.ImageUrl.TrimStart('\\'));
             if (System.IO.File.Exists(oldImagePath))
             {
                 System.IO.File.Delete(oldImagePath);

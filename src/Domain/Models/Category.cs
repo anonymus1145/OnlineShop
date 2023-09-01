@@ -1,5 +1,5 @@
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Shop.Domain.Models
 {
@@ -16,7 +16,7 @@ namespace Shop.Domain.Models
         public string Name { get; set; }
 
         [DisplayName("Display Order")]
-        [Range(1,500)]
+        [Range(1, 500)]
         public int DisplayOrder { get; set; }
     }
 }
