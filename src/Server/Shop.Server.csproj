@@ -2,8 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <Nullable></Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Shop.Server</RootNamespace>
+    <AssemblyName>Shop.Server</AssemblyName>
+
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
